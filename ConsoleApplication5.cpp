@@ -15,18 +15,17 @@ int main()
 
     do {
         cout << "Введите предложение: " << endl;
-
         getline(cin, s);
     } while (s.empty());
+    
     do
     {
         cout << "Введите ограничение: " << endl;
         getline(cin, f);
-
     } while (f.empty());
-
     exc = atoi(f.c_str());
     string* str = new string[s.size()];
+
     while (s[i] != '\0')                            //obrabotka vvodimoi ctroki
     {
         while (s[i] == ',' or s[i] == '.' or s[i] == ';' or s[i] == '\"' or s[i] == ' ')//перепрыгивает разделители
@@ -38,11 +37,9 @@ int main()
         pr = j + 1;
         i++;
     }
-
+    
     for (int i = 0; i < pr; i++) // Работает пока не закончатся слова в массиве
     {
-
-
         for (int j = 0; j < pr; j++) // Ищетв в строке первое повторяющееся n раз слово
         {
             if (i == j) j++;
@@ -59,8 +56,6 @@ int main()
             }
         }
     }
-
-
     cout << "BOT: " << endl;
     for (size_t i = 0; i < pr; i++)
     {
@@ -68,10 +63,7 @@ int main()
         {
             cout << str[i] << ' ';
         }
-
     }
-
-
     delete[] str;
 
 }
