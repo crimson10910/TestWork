@@ -18,9 +18,6 @@ int main()
 
         getline(cin, s);
     } while (s.empty());
-
-    //cout << s.size() << endl;
-
     do
     {
         cout << "Введите ограничение: " << endl;
@@ -29,30 +26,17 @@ int main()
     } while (f.empty());
 
     exc = atoi(f.c_str());
-    //string* str = new string[s.size()];
-    string str[255];
-
-
-
-    while (i != s.size())                            //obrabotka vvodimoi ctroki
+    string* str = new string[s.size()];
+    while (s[i] != '\0')                            //obrabotka vvodimoi ctroki
     {
-        if (s[i] == '\0')
-        {
-            break;
-        }
-
         while (s[i] == ',' or s[i] == '.' or s[i] == ';' or s[i] == '\"' or s[i] == ' ')//перепрыгивает разделители
         {
             j++;
             i++;
         }
-
-
-       
         str[j] += s[i];
         pr = j + 1;
         i++;
-       // cout << i << " != " << s.size() << endl;
     }
 
     for (int i = 0; i < pr; i++) // Работает пока не закончатся слова в массиве
@@ -72,11 +56,8 @@ int main()
             if (str[j] == s)
             {
                 str[j] = "";
-
             }
-
         }
-
     }
 
 
@@ -91,6 +72,6 @@ int main()
     }
 
 
-    //delete[] str;
+    delete[] str;
 
 }
