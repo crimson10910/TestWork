@@ -1,93 +1,11 @@
-#include <iostream>
-#include <string>
-  //#include <Windows.h>
-#include <conio.h>
 
-using namespace std;
+  #include <Windows.h>
 
-bool check(char s1)
-{
-    string q = "иеоаюёяыюЮИЕОЮЁАЯЫ";
-    if (q.find_first_of(s1) == string::npos)
-    {
-        return 0;
-    }
-    else
-    {
-        return 1;
-    }
-}
 
-int main()
-{
+   SetConsoleCP(1251);
+   SetConsoleOutputCP(1251);
 
-  //  SetConsoleCP(1251);
-   // SetConsoleOutputCP(1251);
-
-    int i = 0, a = 0;
-    string zagl ="EYUIOA";
-    string strok = "eyuioa";
-    string s;
-
-    int slovo, count = 0, count1 = 0, pred = 0, pred1 = 0;
-
-    int pr = 0, pr1 = 0;
-
-    do              //ЗАЩИТА ОТ ПУСТОЙ СТРОКИ
-    {
-        cout << " Введите строку: " << endl;
-
-        getline(cin, s);
-
-    } while (s.empty());
-    
-    for(int i = 0; i<s.size(); i++)
-    {
-        for(int j = 0; j<strok.size(); j++)
-        {
-            if(s[i] == zagl[j])
-            {
-                s[i] = strok[j];
-            }
-        }
-    }   
-    cout<< s<<endl;
-    
-    if (s[0] != ' ')   // ПРИКЛЕИВАЕТ ПРОБЕЛ К НАЧАЛУ СТРОКИ
-        s = ' ' + s;
-    if (s[s.size() - 1] != ' ')
-        s = s + ' ';
-
-    slovo = 0;
-    while (s[i] != '\0')
-    {
-        if (s[i] != ' ' && slovo == 0)   // СЧЁТ СЛОВ 
-        {
-            slovo = 1;
-            count++;
-        }
-        else if (s[i] == ' ')
-
-            slovo = 0;
-        i++;
-
-        if (s[i] == s[i - 1])   // СЧЁТ kk
-        {
-            pred++;
-        }
-          if (check(s[i]) ==1 and check(s[i-1])==1 and s[i]==s[i-1]) //Гласные 
-          {
-          pred=pred-1;
-          }
-    }
-    cout << " № - 1 " << endl;
-    cout << "Количество слов - " << count << endl;
-    cout << endl << endl << endl << endl;
-    cout << " № - 2 " << endl;
-    cout << "Количество слов с удвоенными согласными - " << pred << endl;
-    a = 0;
-    a = pred * 100 / count;
-    cout << "Процентное соотношение - " << a << "%";
-    getch();
-    return 0;
-}
+   if(s[i] == s[i+1])
+   {
+   c++
+   }
