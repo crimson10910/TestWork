@@ -1,2 +1,2 @@
-klassa net
+klassa
 Klass
