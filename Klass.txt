@@ -1,2 +1,3 @@
-klassa net
+klassa
 Klass
+77
