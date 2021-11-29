@@ -2,16 +2,24 @@
   #include <Windows.h>
 
 
+<<<<<<< HEAD
    SetConsoleCP(1251);;
    SetConsoleOutputCP(1251);;
+=======
+
+
+
+   SetConsoleCP(1251);
+   (SetConsoleOutputCP(1251));
+>>>>>>> origin/Р’РµС‚РєР°_3
 
    if(s[i] == s[i+1])
    {
    c++
    }
 
-   ещё
+   ГҐГ№Вё
 
-ещё
+ГҐГ№Вё
 
    4545
